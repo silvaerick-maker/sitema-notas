@@ -1,0 +1,39 @@
+Java
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int opcao;
+
+        System.out.println("Escolha seu Pokemon:");
+        System.out.println("1- Bulbasaur");
+        System.out.println("2- Charmander");
+        System.out.println("3- Squirtle");
+
+        System.out.print("Digite o numero da sua escolha: ");
+        opcao = entrada.nextInt();
+
+        switch (opcao) {
+            case 1:
+                System.out.println("Bulbasaur, pokemon de grama, forte contra o tipo agua e fraco contra o tipo fogo, boa sorte treinador/a!");
+                break;
+
+            case 2:
+                System.out.println("Charmander, pokemon de fogo, forte contra o tipo grama e fraco contra o tipo agua, boa sorte treinador/a!");
+                break;
+
+            case 3:
+                System.out.println("Squirtle, pokemon de agua, forte contra o tipo fogo e fraco contra o tipo grama, boa sorte treinador/a!");
+                break;
+
+            default:
+                System.out.println("Opcao invalida! Escolha 1, 2 ou 3.");
+                break;
+        }
+
+        entrada.close();
+    }
+}
