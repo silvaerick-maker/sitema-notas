@@ -1,0 +1,45 @@
+C
+
+#include <stdio.h>
+
+int main() {
+    int opcao;
+    float nota1, nota2, media;
+
+    do {
+        printf("\n=== MENU PRINCIPAL ===\n");
+        printf("1 - Calcular media\n");
+        printf("2 - Ver como funciona\n");
+        printf("0 - Encerrar\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                printf("Digite a primeira nota: ");
+                scanf("%f", &nota1);
+
+                printf("Digite a segunda nota: ");
+                scanf("%f", &nota2);
+
+                media = (nota1 + nota2) / 2;
+
+                printf("Media: %.2f\n", media);
+                break;
+
+            case 2:
+                printf("O programa calcula a media de duas notas.\n");
+                break;
+
+            case 0:
+                printf("Programa encerrado!\n");
+                break;
+
+            default:
+                printf("Opcao invalida!\n");
+        }
+
+    } while (opcao != 0);
+
+    return 0;
+}
